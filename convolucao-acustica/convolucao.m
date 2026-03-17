@@ -4,12 +4,12 @@
 [entrada, fs_entrada] = audioread("entrada/entrada.wav");
 
 % Fase 2: Conversão para Mono
-% Extraindo apenas a primeira coluna das matrizes para garantir que operaremos com vetores 1D
+% Extraindo apenas a primeira coluna das matrizes para operar com vetores 1D
 resp_imp = resp_imp(:,1);
 entrada = entrada(:,1);
 
 % Fase 3: A Convolução
-% Aplicando a resposta ao impulso (ambiente da igreja) no áudio de entrada original
+% Aplicando a resposta ao impulso no áudio de entrada original
 audio_conv = conv(entrada, resp_imp);
 
 % Fase 4: Normalização
